@@ -1,24 +1,88 @@
+import { Suspense } from 'react';
 import { createClient } from '@/lib/supabase/server';
-import { getPerfumes } from '@/lib/queries';
-import Link from 'next/link';
+import { PerfumeCard } from '@/components/perfume/perfume-card';
+import { MonoLabel } from '@/components/ui/mono-label';
+import { ExploreFilters } from '@/components/perfume/explore-filters';
 
-export default async function ExplorePage() {
+interface SearchParams {
+  family?: string;
+  gender?: string;
+}
+
+interface Props {
+  searchParams: Promise<SearchParams>;
+}
+
+async function getPerfumes(filters: SearchParams) {
   const supabase = await createClient();
-  const perfumes = await getPerfumes(supabase, { limit: 24 });
+
+  let query = supabase
+    .from('perfumes')
+    .select(`id, name, price_usd, community_rating, key_accords, olfactive_family, gender_target, brands(name)`)
+    .order('community_rating', { ascending: false })
+    .limit(48);
+
+  if (filters.family) query = query.eq('olfactive_family', filters.family);
+  if (filters.gender) query = query.eq('gender_target', filters.gender);
+
+  const { data } = await query;
+  return data ?? [];
+}
+
+const FAMILIES = ['woody', 'floral', 'oriental', 'fresh', 'chypre', 'fougere', 'gourmand', 'aquatic'];
+const GENDERS  = ['unisex', 'masculine', 'feminine'];
+
+export default async function ExplorePage({ searchParams }: Props) {
+  const params = await searchParams;
+  const perfumes = await getPerfumes(params);
 
   return (
-    <div className="max-w-6xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-8">Explore Perfumes</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {perfumes.map((p) => (
-          <Link key={p.id} href={`/perfume/${p.id}`}
-            className="border rounded-lg p-4 hover:border-foreground transition-colors">
-            <p className="font-semibold truncate">{p.name}</p>
-            <p className="text-sm text-muted-foreground">{(p as any).brands?.name}</p>
-            <p className="text-xs mt-2 capitalize">{p.olfactive_family}</p>
-          </Link>
-        ))}
+    <div className="max-w-7xl mx-auto px-6 py-10">
+
+      {/* Page header */}
+      <div className="flex items-baseline justify-between mb-8">
+        <div>
+          <h1 className="text-[28px] font-light tracking-[-0.02em] mb-1">Explore</h1>
+          <MonoLabel>{perfumes.length} fragrances</MonoLabel>
+        </div>
       </div>
+
+      {/* Filters — client component needs Suspense */}
+      <Suspense fallback={null}>
+        <ExploreFilters
+          families={FAMILIES}
+          genders={GENDERS}
+          activeFamily={params.family}
+          activeGender={params.gender}
+        />
+      </Suspense>
+
+      {/* Grid */}
+      {perfumes.length > 0 ? (
+        <div
+          className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
+          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}
+        >
+          {perfumes.map(p => (
+            <PerfumeCard
+              key={p.id}
+              id={p.id}
+              name={p.name}
+              brandName={(p as any).brands?.name}
+              olfactiveFamily={p.olfactive_family}
+              keyAccords={p.key_accords}
+              communityRating={p.community_rating}
+              priceUsd={p.price_usd}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="py-24 text-center">
+          <MonoLabel>No results</MonoLabel>
+          <p className="text-fg-muted text-sm mt-2">Try a different filter.</p>
+        </div>
+      )}
+
     </div>
   );
 }

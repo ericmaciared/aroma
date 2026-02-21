@@ -8,31 +8,38 @@ export async function Header() {
   const user = await getUser();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-bg/80 border-b border-border backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-6 h-[52px] flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="font-semibold text-lg tracking-tight">
-          aroma
+        <Link href="/" className="font-mono text-[15px] font-medium tracking-tight text-fg">
+          aroma<span className="text-fg-subtle font-light">.</span>
         </Link>
 
         {/* Nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-          <Link href="/explore" className="hover:text-foreground transition-colors">
-            Explore
+        <nav className="hidden md:flex items-center gap-7">
+          <Link href="/explore"
+            className="text-[13px] text-fg-muted hover:text-fg transition-colors tracking-wide">
+            explore
           </Link>
-          <Link href="/recommend" className="hover:text-foreground transition-colors">
-            Recommend
+          <Link href="/recommend"
+            className="text-[13px] text-fg-muted hover:text-fg transition-colors tracking-wide">
+            recommend
+          </Link>
+          <Link href="/explore?tab=brands"
+            className="text-[13px] text-fg-muted hover:text-fg transition-colors tracking-wide">
+            brands
           </Link>
         </nav>
 
-        {/* Right side */}
+        {/* Right */}
         <div className="flex items-center gap-2">
           <ThemeToggle />
           {user ? (
             <UserMenu email={user.email ?? ''} />
           ) : (
-            <Button asChild size="sm">
+            <Button asChild size="sm"
+              className="h-7 px-3 text-[12px] font-medium bg-accent text-accent-fg hover:opacity-85 rounded">
               <Link href="/auth/login">Sign in</Link>
             </Button>
           )}
