@@ -1,0 +1,39 @@
+{
+  "name": "Black Orchid",
+  "brand_name": "Tom Ford",
+  "year_released": 2006,
+  "concentration": "edp",
+  "gender_target": "unisex",
+  "price_usd": 185,
+  "price_tier": "luxury",
+  "olfactive_family": "oriental",
+  "key_accords": ["black truffle", "ylang-ylang", "dark chocolate", "patchouli", "incense"],
+  "notes_top": [
+    { "name": "black truffle", "position": "top" },
+    { "name": "ylang-ylang", "position": "top" },
+    { "name": "bergamot", "position": "top" }
+  ],
+  "notes_heart": [
+    { "name": "black orchid", "position": "heart" },
+    { "name": "lotus wood", "position": "heart" },
+    { "name": "fruity notes", "position": "heart" }
+  ],
+  "notes_base": [
+    { "name": "patchouli", "position": "base" },
+    { "name": "dark chocolate", "position": "base" },
+    { "name": "incense", "position": "base" },
+    { "name": "sandalwood", "position": "base" }
+  ],
+  "community_rating": 4.1,
+  "longevity_score": 9.0,
+  "sillage_score": 8.0,
+  "mood_tags": ["dark", "sensual", "mysterious", "glamorous"],
+  "aesthetic_tags": ["gothic", "luxury", "night", "bold"],
+  "evokes": ["midnight garden", "dark glamour", "velvet", "forbidden"],
+  "key_molecules": ["iso e super", "cashmeran"],
+  "praised_for": ["longevity", "projection", "uniqueness", "bottle"],
+  "criticized_for": ["polarizing", "too dark for some"],
+  "layer_role": ["standalone_only", "base_anchor"],
+  "reformulation_risk": "stable",
+  "source_name": "manual_seed"
+}

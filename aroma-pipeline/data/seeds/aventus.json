@@ -1,0 +1,43 @@
+{
+  "name": "Aventus",
+  "brand_name": "Creed",
+  "year_released": 2010,
+  "concentration": "edp",
+  "gender_target": "masculine",
+  "price_usd": 445,
+  "price_tier": "ultra_luxury",
+  "olfactive_family": "fruity",
+  "key_accords": ["pineapple", "birch", "musk", "oakmoss", "ambergris"],
+  "notes_top": [
+    { "name": "pineapple", "position": "top" },
+    { "name": "blackcurrant", "position": "top" },
+    { "name": "apple", "position": "top" },
+    { "name": "bergamot", "position": "top" }
+  ],
+  "notes_heart": [
+    { "name": "rose", "position": "heart" },
+    { "name": "dry birch", "position": "heart" },
+    { "name": "moroccan jasmine", "position": "heart" },
+    { "name": "patchouli", "position": "heart" }
+  ],
+  "notes_base": [
+    { "name": "oakmoss", "position": "base" },
+    { "name": "ambergris", "position": "base" },
+    { "name": "musk", "position": "base" },
+    { "name": "vanilla", "position": "base" }
+  ],
+  "community_rating": 4.4,
+  "longevity_score": 8.0,
+  "sillage_score": 8.5,
+  "blind_buy_safe": 5.0,
+  "compliment_getter": 9.0,
+  "mood_tags": ["confident", "powerful", "masculine", "fresh", "fruity"],
+  "aesthetic_tags": ["luxury", "classic", "status", "boardroom"],
+  "evokes": ["black tie event", "power broker", "napoleon", "fresh smoke"],
+  "key_molecules": ["iso e super", "ambroxan"],
+  "praised_for": ["projection", "longevity", "compliments", "prestige"],
+  "criticized_for": ["batch variation", "price", "reformulation", "discontinued batches"],
+  "layer_role": ["standalone_only"],
+  "reformulation_risk": "significantly_changed",
+  "source_name": "manual_seed"
+}

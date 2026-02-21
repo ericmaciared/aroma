@@ -1,0 +1,14 @@
+.claude/
+aroma_bootstrap.md
+aroma_core_shell.md
+node_modules
+.env
+.env.local
+.env.*.local
+dist
+.next
+*.tsbuildinfo
+data/raw
+data/checkpoints
+.supabase
+supabase/.temp

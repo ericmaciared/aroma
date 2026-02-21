@@ -1,0 +1,40 @@
+{
+  "name": "Santal 33",
+  "brand_name": "Le Labo",
+  "year_released": 2011,
+  "concentration": "edp",
+  "gender_target": "unisex",
+  "price_usd": 220,
+  "price_tier": "luxury",
+  "olfactive_family": "woody",
+  "key_accords": ["sandalwood", "cedar", "leather", "violet", "papyrus"],
+  "notes_top": [
+    { "name": "cardamom", "position": "top" },
+    { "name": "iris", "position": "top" },
+    { "name": "violet", "position": "top" }
+  ],
+  "notes_heart": [
+    { "name": "ambrette", "position": "heart" },
+    { "name": "australian sandalwood", "position": "heart" },
+    { "name": "papyrus", "position": "heart" }
+  ],
+  "notes_base": [
+    { "name": "cedarwood", "position": "base" },
+    { "name": "leather", "position": "base" },
+    { "name": "musk", "position": "base" }
+  ],
+  "community_rating": 4.2,
+  "longevity_score": 7.5,
+  "sillage_score": 6.0,
+  "blind_buy_safe": 7.0,
+  "compliment_getter": 8.5,
+  "mood_tags": ["cozy", "intellectual", "woody", "unisex", "minimal"],
+  "aesthetic_tags": ["brooklyn", "bookstore", "artisan", "minimal"],
+  "evokes": ["a worn leather jacket", "cedar cabin in the woods", "indie bookstore", "clean skin"],
+  "key_molecules": ["iso e super", "ambroxan", "cashmeran"],
+  "praised_for": ["longevity", "uniqueness", "compliments", "versatility"],
+  "criticized_for": ["price", "reformulation concerns", "polarizing"],
+  "layer_role": ["standalone_only"],
+  "reformulation_risk": "known_changes",
+  "source_name": "manual_seed"
+}

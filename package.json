@@ -1,0 +1,13 @@
+{
+  "name": "aroma",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "aroma-pipeline",
+    "aroma-app"
+  ],
+  "devDependencies": {
+    "zod": "^3.23.0"
+  }
+}
