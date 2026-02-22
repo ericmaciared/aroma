@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "explore": "explore",
+    "recommend": "recommend",
+    "brands": "brands",
+    "signIn": "sign in",
+    "signOut": "sign out",
+    "profile": "profile",
+    "quiz": "quiz"
+  },
+  "home": {
+    "eyebrow": "AI-powered fragrance discovery",
+    "title": "Find the scent that <em>defines you</em>.",
+    "titleItalic": "defines",
+    "subtitle": "Precision fragrance matching. Tell us your skin, your taste, your mood — and we'll find perfumes that are genuinely yours.",
+    "ctaExplore": "Start exploring",
+    "ctaRecommend": "Get AI recommendations",
+    "stats": {
+      "fragrances": "Fragrances",
+      "sensoryAxes": "Sensory axes",
+      "allergensMapped": "Allergens mapped",
+      "embeddingModel": "Embedding model"
+    },
+    "featuredTitle": "Featured",
+    "viewAll": "view all →"
+  },
+  "explore": {
+    "title": "Explore",
+    "filterFamily": "family",
+    "filterGender": "gender",
+    "filterAll": "all",
+    "noResults": "No results",
+    "noResultsHint": "Try a different filter.",
+    "families": {
+      "woody": "woody",
+      "floral": "floral",
+      "oriental": "oriental",
+      "fresh": "fresh",
+      "chypre": "chypre",
+      "fougere": "fougere",
+      "gourmand": "gourmand",
+      "aquatic": "aquatic"
+    },
+    "genders": {
+      "unisex": "unisex",
+      "masculine": "masculine",
+      "feminine": "feminine"
+    }
+  },
+  "perfume": {
+    "addToWishlist": "Add to wishlist",
+    "iOwnThis": "I own this",
+    "notePyramid": "Note pyramid",
+    "sensoryProfile": "Sensory profile",
+    "keyAccords": "Key accords",
+    "communitySays": "Community says",
+    "evokes": "Evokes",
+    "scores": {
+      "compliments": "compliments",
+      "longevity": "longevity",
+      "blindBuy": "blind buy",
+      "sillage": "sillage",
+      "valueForMoney": "value for money"
+    },
+    "notePositions": {
+      "top": "top",
+      "heart": "heart",
+      "base": "base"
+    },
+    "reformulationAlert": "This fragrance has been significantly reformulated. Seek older batches for the original formula.",
+    "reformulationWarning": "Known formula changes reported by the community.",
+    "concentration": {
+      "parfum": "parfum",
+      "edp": "eau de parfum",
+      "edt": "eau de toilette",
+      "edc": "eau de cologne"
+    }
+  },
+  "recommend": {
+    "title": "Recommendations",
+    "subtitle": "Ask me anything about fragrance.",
+    "inputPlaceholder": "Ask anything about fragrance...",
+    "historyLabel": "history",
+    "agentLabel": "aroma",
+    "youLabel": "you"
+  },
+  "auth": {
+    "signIn": "sign in",
+    "signUp": "create account",
+    "welcomeBack": "Welcome back to Aroma.",
+    "newHere": "No account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "continueWithGoogle": "Continue with Google",
+    "emailLabel": "email",
+    "passwordLabel": "password",
+    "sendMagicLink": "send magic link instead",
+    "magicLinkSent": "magic link sent",
+    "magicLinkDescription": "Check your inbox — click the link to sign in.",
+    "useDifferentMethod": "use a different method",
+    "errorOr": "or"
+  },
+  "profile": {
+    "title": "Profile",
+    "wardrobe": "My collection",
+    "wishlist": "Wishlist",
+    "preferences": "Preferences"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong.",
+    "noImage": "no image",
+    "back": "back",
+    "save": "save",
+    "cancel": "cancel"
+  }
+}

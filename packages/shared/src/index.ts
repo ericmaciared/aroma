@@ -6,3 +6,4 @@ export * from './schemas/user-profile';
 export * from './constants/sensory-axes';
 export * from './constants/vocabularies';
 export * from './constants/occasions';
+export * from './constants/locales';

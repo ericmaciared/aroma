@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "explore": "explorer",
+    "recommend": "recommander",
+    "brands": "marques",
+    "signIn": "se connecter",
+    "signOut": "se déconnecter",
+    "profile": "profil",
+    "quiz": "questionnaire"
+  },
+  "home": {
+    "eyebrow": "Découverte de fragrances par IA",
+    "title": "Trouvez le parfum qui <em>vous définit</em>.",
+    "titleItalic": "vous définit",
+    "subtitle": "Correspondance de parfums de précision. Dites-nous votre peau, votre goût, votre humeur — et nous trouverons des parfums qui sont vraiment les vôtres.",
+    "ctaExplore": "Explorer les fragrances",
+    "ctaRecommend": "Recommandations IA",
+    "stats": {
+      "fragrances": "Fragrances",
+      "sensoryAxes": "Axes sensoriels",
+      "allergensMapped": "Allergènes mappés",
+      "embeddingModel": "Modèle d'embedding"
+    },
+    "featuredTitle": "En vedette",
+    "viewAll": "voir tout →"
+  },
+  "explore": {
+    "title": "Explorer",
+    "filterFamily": "famille",
+    "filterGender": "genre",
+    "filterAll": "tous",
+    "noResults": "Aucun résultat",
+    "noResultsHint": "Essayez un autre filtre.",
+    "families": {
+      "woody": "boisé",
+      "floral": "floral",
+      "oriental": "oriental",
+      "fresh": "frais",
+      "chypre": "chypré",
+      "fougere": "fougère",
+      "gourmand": "gourmand",
+      "aquatic": "aquatique"
+    },
+    "genders": {
+      "unisex": "mixte",
+      "masculine": "masculin",
+      "feminine": "féminin"
+    }
+  },
+  "perfume": {
+    "addToWishlist": "Ajouter aux favoris",
+    "iOwnThis": "Je le possède",
+    "notePyramid": "Pyramide olfactive",
+    "sensoryProfile": "Profil sensoriel",
+    "keyAccords": "Accords principaux",
+    "communitySays": "La communauté dit",
+    "evokes": "Évoque",
+    "scores": {
+      "compliments": "compliments",
+      "longevity": "longévité",
+      "blindBuy": "achat aveugle",
+      "sillage": "sillage",
+      "valueForMoney": "rapport qualité-prix"
+    },
+    "notePositions": {
+      "top": "tête",
+      "heart": "cœur",
+      "base": "fond"
+    },
+    "reformulationAlert": "Ce parfum a été significativement reformulé. Cherchez des lots plus anciens pour la formule originale.",
+    "reformulationWarning": "Des changements de formule signalés par la communauté.",
+    "concentration": {
+      "parfum": "parfum",
+      "edp": "eau de parfum",
+      "edt": "eau de toilette",
+      "edc": "eau de cologne"
+    }
+  },
+  "recommend": {
+    "title": "Recommandations",
+    "subtitle": "Posez-moi toutes vos questions sur les fragrances.",
+    "inputPlaceholder": "Demandez tout sur les fragrances...",
+    "historyLabel": "historique",
+    "agentLabel": "aroma",
+    "youLabel": "vous"
+  },
+  "auth": {
+    "signIn": "se connecter",
+    "signUp": "créer un compte",
+    "welcomeBack": "Bienvenue sur Aroma.",
+    "newHere": "Pas de compte ?",
+    "alreadyHaveAccount": "Déjà un compte ?",
+    "continueWithGoogle": "Continuer avec Google",
+    "emailLabel": "e-mail",
+    "passwordLabel": "mot de passe",
+    "sendMagicLink": "envoyer un lien magique",
+    "magicLinkSent": "lien magique envoyé",
+    "magicLinkDescription": "Vérifiez vos e-mails — cliquez sur le lien pour vous connecter.",
+    "useDifferentMethod": "utiliser une autre méthode",
+    "errorOr": "ou"
+  },
+  "profile": {
+    "title": "Profil",
+    "wardrobe": "Ma collection",
+    "wishlist": "Liste de souhaits",
+    "preferences": "Préférences"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite.",
+    "noImage": "pas d'image",
+    "back": "retour",
+    "save": "enregistrer",
+    "cancel": "annuler"
+  }
+}

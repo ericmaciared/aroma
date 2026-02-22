@@ -4,10 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "seed": "tsx src/jobs/load-seeds.ts",
-    "enrich": "tsx src/jobs/enrich-batch.ts",
-    "embed": "tsx src/jobs/embed-batch.ts",
-    "single": "tsx src/jobs/single-perfume.ts"
+    "seed":         "tsx src/jobs/load-seeds.ts",
+    "enrich":       "tsx src/jobs/enrich-batch.ts",
+    "embed":        "tsx src/jobs/embed-batch.ts",
+    "translate":    "tsx src/jobs/translate-batch.ts",
+    "translate:es": "tsx src/jobs/translate-batch.ts es",
+    "translate:fr": "tsx src/jobs/translate-batch.ts fr",
+    "single":       "tsx src/jobs/single-perfume.ts"
   },
   "dependencies": {
     "@aroma/shared": "workspace:*",

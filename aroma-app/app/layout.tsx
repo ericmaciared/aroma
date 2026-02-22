@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { DM_Sans, DM_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
-import { ThemeProvider } from '@/components/providers/theme-provider';
-import { Header } from '@/components/layout/header';
 import './globals.css';
 
 const dmSans = DM_Sans({
@@ -18,22 +16,15 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Aroma — Fragrance Discovery',
-  description: 'AI-powered perfume recommendations tailored to you',
+  title: 'Aroma — Descubrimiento de Fragancias',
+  description: 'Recomendaciones de perfumes con IA adaptadas a ti',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body className={`${dmSans.variable} ${dmMono.variable} font-sans antialiased bg-bg text-fg`}>
-        <ThemeProvider>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-          </div>
-        </ThemeProvider>
+        {children}
         <Analytics />
       </body>
     </html>
