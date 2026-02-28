@@ -30,7 +30,7 @@ export function UserMenu({ email }: Props) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring">
+        <button suppressHydrationWarning className="rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring">
           <Avatar className="h-8 w-8 cursor-pointer">
             <AvatarFallback className="text-xs">{initials}</AvatarFallback>
           </Avatar>

@@ -3,6 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { CurrencyProvider } from '@/contexts/currency-context';
 import { Header } from '@/components/layout/header';
 
 interface Props {
@@ -21,14 +22,16 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <ThemeProvider>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-        </div>
-      </ThemeProvider>
+      <CurrencyProvider>
+        <ThemeProvider>
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+          </div>
+        </ThemeProvider>
+      </CurrencyProvider>
     </NextIntlClientProvider>
   );
 }

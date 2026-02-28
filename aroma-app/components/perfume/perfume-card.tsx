@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { AccordTag } from '@/components/ui/accord-tag';
 import { MonoLabel } from '@/components/ui/mono-label';
+import { PriceDisplay } from '@/components/perfume/price-display';
 
 interface PerfumeCardProps {
   id: string;
@@ -78,9 +81,7 @@ export function PerfumeCard({
             <><span className="text-fg">{communityRating.toFixed(1)}</span> / 5</>
           ) : '—'}
         </span>
-        <span className="font-mono text-[11px] text-fg-muted">
-          {priceUsd != null ? `$${priceUsd}` : '—'}
-        </span>
+        <PriceDisplay priceUsd={priceUsd} className="font-mono text-[11px] text-fg-muted" />
       </div>
     </div>
   );

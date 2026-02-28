@@ -7,6 +7,7 @@ import { ScoreCard } from '@/components/ui/score-card';
 import { NotesPyramid } from '@/components/perfume/notes-pyramid';
 import { SensoryRadar, type SensoryDataPoint } from '@/components/perfume/sensory-radar';
 import { SENSORY_AXES } from '@aroma/shared';
+import { PriceDisplay } from '@/components/perfume/price-display';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -129,7 +130,7 @@ export default async function PerfumePage({ params }: Props) {
             {(p as any).price_usd && (
               <span className="font-mono text-[11px] text-fg-muted flex items-center">
                 <span className="mx-2 text-border-strong">·</span>
-                ${(p as any).price_usd}
+                <PriceDisplay priceUsd={(p as any).price_usd} />
               </span>
             )}
           </div>

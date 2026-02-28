@@ -22,7 +22,7 @@ export function LocaleSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.06em] px-2 py-1 rounded hover:bg-bg-muted">
+        <button suppressHydrationWarning className="font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.06em] px-2 py-1 rounded hover:bg-bg-muted">
           {locale.toUpperCase()}
         </button>
       </DropdownMenuTrigger>

@@ -4,6 +4,7 @@ import { getUser } from '@/lib/auth';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { UserMenu } from '@/components/layout/user-menu';
 import { LocaleSwitcher } from '@/components/layout/locale-switcher';
+import { CurrencySwitcher } from '@/components/layout/currency-switcher';
 import { Button } from '@/components/ui/button';
 
 export async function Header() {
@@ -38,6 +39,7 @@ export async function Header() {
         {/* Right */}
         <div className="flex items-center gap-2">
           <LocaleSwitcher />
+          <CurrencySwitcher />
           <ThemeToggle />
           {user ? (
             <UserMenu email={user.email ?? ''} />
