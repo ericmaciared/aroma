@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MonoLabel } from '@/components/ui/mono-label';
 import { AccordTag } from '@/components/ui/accord-tag';
 import { ScoreCard } from '@/components/ui/score-card';
@@ -19,7 +20,7 @@ export default async function PerfumePage({ params }: Props) {
 
   const { data: p, error } = await supabase
     .from('perfumes')
-    .select(`*, brands(id, name, slug)`)
+    .select(`*, brands(id, name, slug), images(url, image_type)`)
     .eq('id', id)
     .single();
 
@@ -78,12 +79,15 @@ export default async function PerfumePage({ params }: Props) {
 
         {/* Left: image + actions */}
         <div>
-          <div className="w-full aspect-[2/3] bg-muted rounded-lg border border-border flex items-center justify-center mb-4">
+          <div className="w-full aspect-[2/3] relative overflow-hidden mb-4 flex items-center justify-center">
             {(p as any).images?.[0]?.url ? (
-              <img
+              <Image
                 src={(p as any).images[0].url}
                 alt={p.name}
-                className="w-full h-full object-cover rounded-lg"
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 1024px) 100vw, 260px"
+                priority
               />
             ) : (
               <span className="font-mono text-[11px] text-fg-subtle tracking-[0.08em]">

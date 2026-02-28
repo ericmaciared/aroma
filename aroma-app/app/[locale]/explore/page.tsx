@@ -18,7 +18,7 @@ async function getPerfumes(filters: SearchParams) {
 
   let query = supabase
     .from('perfumes')
-    .select(`id, name, price_usd, community_rating, key_accords, olfactive_family, gender_target, brands(id, name)`)
+    .select(`id, name, price_usd, community_rating, key_accords, olfactive_family, gender_target, brands(id, name), images(url, image_type)`)
     .order('community_rating', { ascending: false })
     .limit(48);
 
@@ -74,6 +74,7 @@ export default async function ExplorePage({ searchParams }: Props) {
               keyAccords={p.key_accords}
               communityRating={p.community_rating}
               priceUsd={p.price_usd}
+              imageUrl={(p as any).images?.[0]?.url ?? null}
             />
           ))}
         </div>

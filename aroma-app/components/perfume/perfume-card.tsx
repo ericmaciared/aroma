@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { AccordTag } from '@/components/ui/accord-tag';
 import { MonoLabel } from '@/components/ui/mono-label';
 import { PriceDisplay } from '@/components/perfume/price-display';
@@ -36,10 +37,12 @@ export function PerfumeCard({
       {/* Bottle image */}
       <div className="pointer-events-none w-full aspect-[3/4] bg-muted rounded flex items-center justify-center mb-4 overflow-hidden border border-border relative">
         {imageUrl ? (
-          <img
+          <Image
             src={imageUrl}
             alt={name}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 200px"
           />
         ) : (
           <BottlePlaceholder />

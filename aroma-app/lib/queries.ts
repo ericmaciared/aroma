@@ -3,7 +3,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 export async function getPerfumeById(supabase: SupabaseClient, id: string) {
   const { data, error } = await supabase
     .from('perfumes')
-    .select(`*, brands(name, slug)`)
+    .select(`*, brands(name, slug), images(url, image_type)`)
     .eq('id', id)
     .single();
   if (error) throw error;
@@ -18,7 +18,7 @@ export async function getPerfumes(supabase: SupabaseClient, options?: {
 }) {
   let query = supabase
     .from('perfumes')
-    .select(`id, name, gender_target, olfactive_family, price_tier, community_rating, brands(name)`)
+    .select(`id, name, gender_target, olfactive_family, price_tier, community_rating, brands(name), images(url, image_type)`)
     .order('community_rating', { ascending: false })
     .limit(options?.limit ?? 24);
 

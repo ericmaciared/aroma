@@ -18,8 +18,8 @@ interface Props {
 
 const overlayVariants = {
   hidden:  { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.18, ease: 'easeOut' } },
-  exit:    { opacity: 0, transition: { duration: 0.2,  ease: 'easeIn', delay: 0.05 } },
+  visible: { opacity: 1, transition: { duration: 0.18, ease: 'easeOut' as const } },
+  exit:    { opacity: 0, transition: { duration: 0.2,  ease: 'easeIn' as const, delay: 0.05 } },
 };
 
 const navVariants = {
@@ -31,7 +31,7 @@ const navVariants = {
 const linkVariants = {
   hidden:  { opacity: 0, y: 14 },
   visible: { opacity: 1, y: 0,  transition: { duration: 0.25, ease: [0.25, 0.1, 0.25, 1] as const } },
-  exit:    { opacity: 0, y: -8, transition: { duration: 0.15, ease: 'easeIn' } },
+  exit:    { opacity: 0, y: -8, transition: { duration: 0.15, ease: 'easeIn' as const } },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
