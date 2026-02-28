@@ -12,6 +12,7 @@ interface Perfume {
   olfactive_family: string | null;
   community_rating: number | null;
   price_usd: number | null;
+  images?: Array<{ url: string; image_type: string }> | null;
 }
 
 type SortKey = 'rating' | 'name' | 'price';
@@ -123,6 +124,7 @@ export function BrandPerfumeGrid({ perfumes, families }: Props) {
               olfactiveFamily={p.olfactive_family}
               communityRating={p.community_rating}
               priceUsd={p.price_usd}
+              imageUrl={p.images?.[0]?.url ?? null}
             />
           ))}
         </div>

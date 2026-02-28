@@ -9,19 +9,19 @@
   "olfactive_family": "woody",
   "key_accords": ["sandalwood", "cedar", "leather", "violet", "papyrus"],
   "notes_top": [
-    { "name": "cardamom", "position": "top" },
-    { "name": "iris", "position": "top" },
-    { "name": "violet", "position": "top" }
+    { "name": "cardamom",  "position": "top", "intensity": 6, "is_synthetic": false },
+    { "name": "iris",      "position": "top", "intensity": 5, "is_synthetic": false },
+    { "name": "violet",    "position": "top", "intensity": 7, "is_synthetic": false }
   ],
   "notes_heart": [
-    { "name": "ambrette", "position": "heart" },
-    { "name": "australian sandalwood", "position": "heart" },
-    { "name": "papyrus", "position": "heart" }
+    { "name": "ambrette",              "position": "heart", "intensity": 6, "is_synthetic": false },
+    { "name": "australian sandalwood", "position": "heart", "intensity": 9, "is_synthetic": false },
+    { "name": "papyrus",               "position": "heart", "intensity": 7, "is_synthetic": false }
   ],
   "notes_base": [
-    { "name": "cedarwood", "position": "base" },
-    { "name": "leather", "position": "base" },
-    { "name": "musk", "position": "base" }
+    { "name": "cedarwood", "position": "base", "intensity": 8, "is_synthetic": false },
+    { "name": "leather",   "position": "base", "intensity": 7, "is_synthetic": true  },
+    { "name": "musk",      "position": "base", "intensity": 6, "is_synthetic": true  }
   ],
   "community_rating": 4.2,
   "longevity_score": 7.5,

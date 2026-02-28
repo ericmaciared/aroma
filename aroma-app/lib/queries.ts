@@ -1,5 +1,18 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 
+export async function getPerfumesByNote(supabase: SupabaseClient, name: string) {
+  const noteName = name.toLowerCase();
+  const encoded = JSON.stringify([{ name: noteName }]);
+  const { data, error } = await supabase
+    .from('perfumes')
+    .select(`id, name, key_accords, olfactive_family, community_rating, price_usd, notes_top, notes_heart, notes_base, brands(id, name), images(url, image_type)`)
+    .or(`notes_top.cs.${encoded},notes_heart.cs.${encoded},notes_base.cs.${encoded}`)
+    .order('community_rating', { ascending: false, nullsFirst: false })
+    .limit(100);
+  if (error) throw error;
+  return data ?? [];
+}
+
 export async function getPerfumeById(supabase: SupabaseClient, id: string) {
   const { data, error } = await supabase
     .from('perfumes')

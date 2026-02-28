@@ -20,7 +20,7 @@ export default async function BrandPage({ params }: Props) {
       .single(),
     supabase
       .from('perfumes')
-      .select('id, name, key_accords, olfactive_family, community_rating, price_usd')
+      .select('id, name, key_accords, olfactive_family, community_rating, price_usd, images(url, image_type)')
       .eq('brand_id', id)
       .order('community_rating', { ascending: false, nullsFirst: false }),
   ]);
@@ -113,6 +113,7 @@ export default async function BrandPage({ params }: Props) {
                 olfactiveFamily={p.olfactive_family}
                 communityRating={p.community_rating}
                 priceUsd={p.price_usd}
+                imageUrl={(p as any).images?.[0]?.url ?? null}
               />
             ))}
           </div>

@@ -11,17 +11,17 @@
   "key_accords": ["bergamot", "geranium", "benzoin", "guaiac wood", "musk", "balsam"],
 
   "notes_top": [
-    { "name": "calabrian bergamot", "position": "top" },
-    { "name": "musk", "position": "top" }
+    { "name": "calabrian bergamot", "position": "top", "intensity": 8, "is_synthetic": false },
+    { "name": "musk",               "position": "top", "intensity": 4, "is_synthetic": true  }
   ],
   "notes_heart": [
-    { "name": "bourbon geranium", "position": "heart" },
-    { "name": "rose geranium", "position": "heart" }
+    { "name": "bourbon geranium", "position": "heart", "intensity": 9, "is_synthetic": false },
+    { "name": "rose geranium",    "position": "heart", "intensity": 7, "is_synthetic": false }
   ],
   "notes_base": [
-    { "name": "benzoin", "position": "base" },
-    { "name": "peru balsam", "position": "base" },
-    { "name": "guaiac wood", "position": "base" }
+    { "name": "benzoin",     "position": "base", "intensity": 7, "is_synthetic": false },
+    { "name": "peru balsam", "position": "base", "intensity": 6, "is_synthetic": false },
+    { "name": "guaiac wood", "position": "base", "intensity": 8, "is_synthetic": false }
   ],
 
   "sensory_sweetness":    4.0,

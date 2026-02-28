@@ -9,22 +9,22 @@
   "olfactive_family": "fruity",
   "key_accords": ["pineapple", "birch", "musk", "oakmoss", "ambergris"],
   "notes_top": [
-    { "name": "pineapple", "position": "top" },
-    { "name": "blackcurrant", "position": "top" },
-    { "name": "apple", "position": "top" },
-    { "name": "bergamot", "position": "top" }
+    { "name": "pineapple",    "position": "top", "intensity": 9, "is_synthetic": false },
+    { "name": "blackcurrant", "position": "top", "intensity": 7, "is_synthetic": false },
+    { "name": "apple",        "position": "top", "intensity": 6, "is_synthetic": false },
+    { "name": "bergamot",     "position": "top", "intensity": 5, "is_synthetic": false }
   ],
   "notes_heart": [
-    { "name": "rose", "position": "heart" },
-    { "name": "dry birch", "position": "heart" },
-    { "name": "moroccan jasmine", "position": "heart" },
-    { "name": "patchouli", "position": "heart" }
+    { "name": "rose",             "position": "heart", "intensity": 6, "is_synthetic": false },
+    { "name": "dry birch",        "position": "heart", "intensity": 8, "is_synthetic": false },
+    { "name": "moroccan jasmine", "position": "heart", "intensity": 5, "is_synthetic": false },
+    { "name": "patchouli",        "position": "heart", "intensity": 6, "is_synthetic": false }
   ],
   "notes_base": [
-    { "name": "oakmoss", "position": "base" },
-    { "name": "ambergris", "position": "base" },
-    { "name": "musk", "position": "base" },
-    { "name": "vanilla", "position": "base" }
+    { "name": "oakmoss",   "position": "base", "intensity": 7, "is_synthetic": false },
+    { "name": "ambergris", "position": "base", "intensity": 8, "is_synthetic": false },
+    { "name": "musk",      "position": "base", "intensity": 7, "is_synthetic": true  },
+    { "name": "vanilla",   "position": "base", "intensity": 5, "is_synthetic": false }
   ],
   "community_rating": 4.4,
   "longevity_score": 8.0,

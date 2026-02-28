@@ -9,20 +9,20 @@
   "olfactive_family": "oriental",
   "key_accords": ["black truffle", "ylang-ylang", "dark chocolate", "patchouli", "incense"],
   "notes_top": [
-    { "name": "black truffle", "position": "top" },
-    { "name": "ylang-ylang", "position": "top" },
-    { "name": "bergamot", "position": "top" }
+    { "name": "black truffle", "position": "top", "intensity": 8, "is_synthetic": false },
+    { "name": "ylang-ylang",   "position": "top", "intensity": 7, "is_synthetic": false },
+    { "name": "bergamot",      "position": "top", "intensity": 5, "is_synthetic": false }
   ],
   "notes_heart": [
-    { "name": "black orchid", "position": "heart" },
-    { "name": "lotus wood", "position": "heart" },
-    { "name": "fruity notes", "position": "heart" }
+    { "name": "black orchid",  "position": "heart", "intensity": 9, "is_synthetic": true  },
+    { "name": "lotus wood",    "position": "heart", "intensity": 6, "is_synthetic": false },
+    { "name": "fruity notes",  "position": "heart", "intensity": 4, "is_synthetic": true  }
   ],
   "notes_base": [
-    { "name": "patchouli", "position": "base" },
-    { "name": "dark chocolate", "position": "base" },
-    { "name": "incense", "position": "base" },
-    { "name": "sandalwood", "position": "base" }
+    { "name": "patchouli",      "position": "base", "intensity": 8, "is_synthetic": false },
+    { "name": "dark chocolate", "position": "base", "intensity": 7, "is_synthetic": false },
+    { "name": "incense",        "position": "base", "intensity": 6, "is_synthetic": false },
+    { "name": "sandalwood",     "position": "base", "intensity": 7, "is_synthetic": false }
   ],
   "community_rating": 4.1,
   "longevity_score": 9.0,

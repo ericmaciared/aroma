@@ -1,3 +1,5 @@
+import { Link } from '@/i18n/navigation';
+
 interface Note {
   name: string;
   position?: string;
@@ -27,12 +29,13 @@ export function NotesPyramid({ top, heart, base }: Props) {
           </span>
           <div className="flex flex-wrap gap-1.5">
             {(notes ?? []).map((note, i) => (
-              <span
+              <Link
                 key={i}
-                className="font-mono text-[11px] px-2 py-1 rounded-sm border border-border text-fg-muted"
+                href={`/note/${encodeURIComponent(note.name.toLowerCase())}`}
+                className="font-mono text-[11px] px-2 py-1 rounded-sm border border-border text-fg-muted hover:border-fg-subtle hover:text-fg transition-colors"
               >
                 {note.name}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
