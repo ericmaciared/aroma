@@ -29,7 +29,7 @@ export async function Header() {
             className="text-[13px] text-fg-muted hover:text-fg transition-colors tracking-wide">
             {t('recommend')}
           </Link>
-          <Link href="/explore?tab=brands"
+          <Link href="/brands"
             className="text-[13px] text-fg-muted hover:text-fg transition-colors tracking-wide">
             {t('brands')}
           </Link>

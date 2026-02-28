@@ -8,7 +8,7 @@ async function getFeaturedPerfumes() {
   const supabase = await createClient();
   const { data } = await supabase
     .from('perfumes')
-    .select(`id, name, price_usd, community_rating, key_accords, olfactive_family, brands(name)`)
+    .select(`id, name, price_usd, community_rating, key_accords, olfactive_family, brands(id, name)`)
     .order('community_rating', { ascending: false })
     .limit(4);
   return data ?? [];
@@ -92,6 +92,7 @@ export default async function HomePage() {
                 id={p.id}
                 name={p.name}
                 brandName={(p as any).brands?.name}
+                brandId={(p as any).brands?.id}
                 olfactiveFamily={p.olfactive_family}
                 keyAccords={p.key_accords}
                 communityRating={p.community_rating}

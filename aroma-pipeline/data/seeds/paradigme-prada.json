@@ -1,0 +1,64 @@
+{
+  "name": "Paradigme",
+  "brand_name": "Prada",
+  "year_released": 2025,
+  "concentration": "edp",
+  "gender_target": "masculine",
+  "price_usd": 155,
+  "price_tier": "luxury",
+  "olfactive_family": "woody",
+  "olfactive_subfamilies": ["oriental", "aromatic"],
+  "key_accords": ["bergamot", "geranium", "benzoin", "guaiac wood", "musk", "balsam"],
+
+  "notes_top": [
+    { "name": "calabrian bergamot", "position": "top" },
+    { "name": "musk", "position": "top" }
+  ],
+  "notes_heart": [
+    { "name": "bourbon geranium", "position": "heart" },
+    { "name": "rose geranium", "position": "heart" }
+  ],
+  "notes_base": [
+    { "name": "benzoin", "position": "base" },
+    { "name": "peru balsam", "position": "base" },
+    { "name": "guaiac wood", "position": "base" }
+  ],
+
+  "sensory_sweetness":    4.0,
+  "sensory_freshness":    6.5,
+  "sensory_warmth":       7.5,
+  "sensory_heaviness":    5.0,
+  "sensory_powderiness":  3.5,
+  "sensory_woodiness":    7.0,
+  "sensory_smokiness":    1.5,
+  "sensory_leatheriness": 1.0,
+  "sensory_floralness":   4.5,
+  "sensory_fruitiness":   1.5,
+  "sensory_greenness":    3.5,
+  "sensory_aquatics":     1.0,
+  "sensory_spiciness":    2.0,
+  "sensory_gourmand":     3.0,
+  "sensory_animalic":     2.5,
+  "sensory_earthiness":   1.5,
+  "sensory_resinousness": 6.5,
+
+  "community_rating": 3.5,
+  "rating_count": 920,
+  "compliment_getter": 6.5,
+  "longevity_score": 7.5,
+  "sillage_score": 5.5,
+  "blind_buy_safe": 5.0,
+  "value_for_money": 5.5,
+
+  "mood_tags": ["clean", "fresh", "sophisticated", "versatile", "modern"],
+  "aesthetic_tags": ["minimalist", "Prada triangle", "everyday luxury", "office-ready"],
+  "evokes": ["a crisp morning in Milan", "bergamot on warm skin", "quiet sophistication", "fresh linen"],
+  "praised_for": ["longevity", "versatility", "clean freshness", "geranium note", "office-safe"],
+  "criticized_for": ["generic", "overpriced", "safe", "lacks personality", "synthetic feel"],
+  "key_molecules": ["iso e super", "ambroxan", "cashmeran"],
+  "layer_role": ["standalone_only"],
+  "vegan": false,
+  "cruelty_free": false,
+  "reformulation_risk": "stable",
+  "source_name": "manual_seed"
+}

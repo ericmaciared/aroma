@@ -18,7 +18,7 @@ async function getPerfumes(filters: SearchParams) {
 
   let query = supabase
     .from('perfumes')
-    .select(`id, name, price_usd, community_rating, key_accords, olfactive_family, gender_target, brands(name)`)
+    .select(`id, name, price_usd, community_rating, key_accords, olfactive_family, gender_target, brands(id, name)`)
     .order('community_rating', { ascending: false })
     .limit(48);
 
@@ -69,6 +69,7 @@ export default async function ExplorePage({ searchParams }: Props) {
               id={p.id}
               name={p.name}
               brandName={(p as any).brands?.name}
+              brandId={(p as any).brands?.id}
               olfactiveFamily={p.olfactive_family}
               keyAccords={p.key_accords}
               communityRating={p.community_rating}
