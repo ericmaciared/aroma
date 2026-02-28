@@ -112,7 +112,7 @@ export function BrandPerfumeGrid({ perfumes, families }: Props) {
       {displayed.length > 0 ? (
         <div
           className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
-          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}
         >
           {displayed.map(p => (
             <PerfumeCard

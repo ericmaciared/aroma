@@ -51,7 +51,7 @@ export default async function BrandPage({ params }: Props) {
   if (avgRating) metaParts.push(`★ ${avgRating} avg`);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10 space-y-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10">
 
       {/* ── HEADER ── */}
       <div className="max-w-2xl">
@@ -59,7 +59,7 @@ export default async function BrandPage({ params }: Props) {
           <MonoLabel className="block mb-3">{brand.tier}</MonoLabel>
         )}
 
-        <h1 className="text-[42px] font-light tracking-[-0.03em] leading-[1.1] mb-4">
+        <h1 className="text-[clamp(28px,5vw,42px)] font-light tracking-[-0.03em] leading-[1.1] mb-4">
           {brand.name}
         </h1>
 
@@ -102,7 +102,7 @@ export default async function BrandPage({ params }: Props) {
           <MonoLabel className="block mb-5">Top Rated</MonoLabel>
           <div
             className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
-            style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}
+            style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}
           >
             {topRated.map(p => (
               <PerfumeCard

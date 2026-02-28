@@ -57,11 +57,11 @@ export default async function PerfumePage({ params }: Props) {
   ].filter(s => s.value != null);
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-10 space-y-10">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-10">
 
       {/* Reformulation alert */}
       {showReformulationAlert && (
-        <div className="border border-border-strong rounded px-4 py-3 flex items-center gap-3 bg-muted">
+        <div className="border border-border-strong rounded px-4 py-3 flex flex-wrap items-start gap-x-3 gap-y-1.5 bg-muted">
           <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-fg-subtle">
             reformulation
           </span>
@@ -111,7 +111,7 @@ export default async function PerfumePage({ params }: Props) {
             <MonoLabel className="block mb-2">{(p as any).brands?.name ?? '—'}</MonoLabel>
           )}
 
-          <h1 className="text-[36px] font-light tracking-[-0.03em] leading-[1.1] mb-4">
+          <h1 className="text-[clamp(26px,5vw,36px)] font-light tracking-[-0.03em] leading-[1.1] mb-4">
             {p.name}
           </h1>
 

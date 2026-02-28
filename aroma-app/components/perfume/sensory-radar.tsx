@@ -46,7 +46,7 @@ export function SensoryRadar({ data }: Props) {
 
   return (
     <ResponsiveContainer width="100%" height={360}>
-      <RadarChart data={chartData} margin={{ top: 10, right: 30, bottom: 10, left: 30 }}>
+      <RadarChart data={chartData} margin={{ top: 20, right: 50, bottom: 20, left: 50 }}>
         <PolarGrid stroke="var(--border)" />
         <PolarAngleAxis
           dataKey="label"

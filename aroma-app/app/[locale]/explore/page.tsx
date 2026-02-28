@@ -37,7 +37,7 @@ export default async function ExplorePage({ searchParams }: Props) {
   const perfumes = await getPerfumes(params);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
 
       {/* Page header */}
       <div className="flex items-baseline justify-between mb-8">
@@ -61,7 +61,7 @@ export default async function ExplorePage({ searchParams }: Props) {
       {perfumes.length > 0 ? (
         <div
           className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
-          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}
         >
           {perfumes.map(p => (
             <PerfumeCard

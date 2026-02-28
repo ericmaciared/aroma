@@ -19,7 +19,7 @@ export default async function HomePage() {
   const featured = await getFeaturedPerfumes();
 
   return (
-    <div className="max-w-7xl mx-auto px-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
       {/* ── Hero ── */}
       <section className="pt-20 pb-16 border-b border-border">
@@ -54,7 +54,7 @@ export default async function HomePage() {
         </div>
 
         {/* Stats */}
-        <div className="flex gap-9 mt-14 pt-8 border-t border-border">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-14 pt-8 border-t border-border">
           {[
             { num: '12,400', label: t('stats.fragrances') },
             { num: '17',     label: t('stats.sensoryAxes') },
@@ -82,10 +82,7 @@ export default async function HomePage() {
             </Link>
           </div>
 
-          <div
-            className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
-            style={{ gridTemplateColumns: `repeat(${Math.min(featured.length, 4)}, 1fr)` }}
-          >
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border rounded-lg overflow-hidden">
             {featured.map(p => (
               <PerfumeCard
                 key={p.id}
