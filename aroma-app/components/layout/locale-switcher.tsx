@@ -22,7 +22,7 @@ export function LocaleSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button suppressHydrationWarning className="font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.06em] px-2 py-1 rounded hover:bg-bg-muted">
+        <button suppressHydrationWarning className="font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.04em] px-2 py-1 rounded hover:bg-bg-muted">
           {locale.toUpperCase()}
         </button>
       </DropdownMenuTrigger>
@@ -31,7 +31,7 @@ export function LocaleSwitcher() {
           <DropdownMenuItem
             key={loc}
             onClick={() => switchLocale(loc)}
-            className={`font-mono text-[11px] tracking-[0.06em] ${locale === loc ? 'text-fg' : 'text-fg-muted'}`}
+            className={`font-mono text-[11px] tracking-[0.04em] ${locale === loc ? 'text-fg' : 'text-fg-muted'}`}
           >
             {loc.toUpperCase()} — {LOCALE_NAMES[loc]}
           </DropdownMenuItem>

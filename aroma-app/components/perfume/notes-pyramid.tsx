@@ -24,7 +24,7 @@ export function NotesPyramid({ top, heart, base }: Props) {
     <div className="divide-y divide-border">
       {rows.map(({ label, notes }) => (
         <div key={label} className="flex items-start gap-4 py-2.5">
-          <span className="font-mono text-[10px] text-fg-subtle tracking-[0.08em] w-9 pt-0.5 shrink-0">
+          <span className="font-mono text-[10px] text-fg-subtle tracking-[0.04em] w-9 pt-0.5 shrink-0">
             {label}
           </span>
           <div className="flex flex-wrap gap-1.5">

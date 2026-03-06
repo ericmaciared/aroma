@@ -8,7 +8,7 @@ interface Props {
 export function MonoLabel({ children, className }: Props) {
   return (
     <span className={cn(
-      'font-mono text-[10px] uppercase tracking-[0.12em] text-fg-subtle',
+      'font-mono-label text-fg-subtle',
       className
     )}>
       {children}

@@ -1,8 +1,8 @@
 'use client';
 
 import { Suspense, useState } from 'react';
-import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
+import { useSearchParams } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 import { MonoLabel } from '@/components/ui/mono-label';
 
@@ -108,7 +108,7 @@ function LoginForm() {
       </form>
 
       <button onClick={handleMagicLink} disabled={loading}
-        className="w-full py-2 font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.06em]">
+        className="w-full py-2 font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.04em]">
         send magic link instead
       </button>
 
