@@ -65,26 +65,31 @@ export function SensoryRadar({ data }: Props) {
   }));
 
   return (
-    <ResponsiveContainer width="100%" height={360}>
-      <RadarChart data={chartData} margin={{ top: 20, right: 50, bottom: 20, left: 50 }}>
-        <PolarGrid stroke={border} />
-        <PolarAngleAxis
-          dataKey="label"
-          tick={{
-            fontSize: 10,
-            fill: fgSubtle,
-            fontFamily: 'ui-monospace, SFMono-Regular, monospace',
-          }}
-        />
-        <Radar
-          dataKey="value"
-          stroke={fg}
-          fill={fg}
-          fillOpacity={0.08}
-          strokeWidth={1.5}
-          dot={false}
-        />
-      </RadarChart>
-    </ResponsiveContainer>
+    <div className="animate-fade-in">
+      <ResponsiveContainer width="100%" height={360}>
+        <RadarChart data={chartData} margin={{ top: 20, right: 50, bottom: 20, left: 50 }}>
+          <PolarGrid stroke={border} />
+          <PolarAngleAxis
+            dataKey="label"
+            tick={{
+              fontSize: 10,
+              fill: fgSubtle,
+              fontFamily: 'ui-monospace, SFMono-Regular, monospace',
+            }}
+          />
+          <Radar
+            dataKey="value"
+            stroke={fg}
+            fill={fg}
+            fillOpacity={0.08}
+            strokeWidth={1.5}
+            dot={false}
+            isAnimationActive={true}
+            animationDuration={600}
+            animationEasing="ease-out"
+          />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
   );
 }
