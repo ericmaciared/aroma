@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server';
 import { MonoLabel } from '@/components/ui/mono-label';
 import { Link } from '@/i18n/navigation';
+import { FamilyIllustration } from '@/components/ui/family-illustration';
 
 export default async function NotesPage() {
   const supabase = await createClient();
@@ -48,7 +49,15 @@ export default async function NotesPage() {
           const familyNotes = grouped.get(family)!;
           return (
             <div key={family} className="border-t border-border pt-6">
-              <div className="flex items-baseline gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 text-fg-subtle shrink-0">
+                  <FamilyIllustration
+                    family={family}
+                    name={family}
+                    opacity={0.35}
+                    className="w-full h-full"
+                  />
+                </div>
                 <MonoLabel>{family}</MonoLabel>
                 <span className="font-mono text-[10px] text-fg-subtle">
                   {familyNotes.length}
