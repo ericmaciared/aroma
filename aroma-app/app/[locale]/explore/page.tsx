@@ -40,11 +40,20 @@ export default async function ExplorePage({ searchParams }: Props) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
 
       {/* Page header */}
-      <div className="flex items-baseline justify-between mb-8">
-        <div>
-          <h1 className="text-[28px] font-light tracking-[-0.02em] mb-1">Explore</h1>
-          <MonoLabel>{perfumes.length} fragrances</MonoLabel>
+      <div className="relative mb-8 pt-2 overflow-hidden">
+        {/* Ghost count */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 font-mono font-medium leading-none text-fg select-none opacity-[0.04] tracking-tight hidden lg:block"
+          style={{ fontSize: '140px' }}
+        >
+          {perfumes.length}
         </div>
+        <div className="font-mono text-[10px] tracking-[0.14em] uppercase text-amber mb-2 flex items-center gap-2">
+          <span className="inline-block w-4 h-px bg-amber" />
+          catalogue — {perfumes.length} fragrances
+        </div>
+        <h1 className="text-[clamp(32px,4vw,48px)] font-light tracking-[-0.02em] text-fg">Explore</h1>
       </div>
 
       {/* Filters — client component needs Suspense */}

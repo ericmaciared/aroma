@@ -27,7 +27,8 @@ export function ExploreFilters({ families, genders, activeFamily, activeGender }
   }
 
   return (
-    <div className="space-y-3 mb-8">
+    <div className="sticky top-[52px] z-40 bg-bg/90 backdrop-blur-md border-b border-border -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 mb-8">
+    <div className="space-y-3 max-w-7xl mx-auto">
       {/* Family */}
       <div className="flex items-center gap-3 flex-wrap">
         <MonoLabel className="w-14 shrink-0">family</MonoLabel>
@@ -63,6 +64,7 @@ export function ExploreFilters({ families, genders, activeFamily, activeGender }
           />
         ))}
       </div>
+    </div>
     </div>
   );
 }
