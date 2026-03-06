@@ -50,11 +50,10 @@ export default async function NotesPage() {
           return (
             <div key={family} className="border-t border-border pt-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 text-fg-subtle shrink-0">
+                <div className="w-12 h-12 text-fg-muted shrink-0">
                   <FamilyIllustration
                     family={family}
                     name={family}
-                    opacity={0.35}
                     className="w-full h-full"
                   />
                 </div>

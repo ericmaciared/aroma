@@ -184,7 +184,7 @@ export default async function NotePage({ params }: Props) {
                 href={`/note/${encodeURIComponent(n)}`}
                 className="font-mono text-[11px] px-2 py-1 rounded-sm border border-border text-fg-muted hover:border-fg-subtle hover:text-fg transition-colors"
               >
-                {n.charAt(0).toUpperCase() + n.slice(1)}
+                {n}
               </Link>
             ))}
           </div>
