@@ -60,16 +60,16 @@ export function BrandPerfumeGrid({ perfumes, families }: Props) {
 
         {/* Sort toggles */}
         <div className="flex items-center gap-1">
-          <span className="font-mono text-[10px] text-fg-subtle mr-2 tracking-[0.08em]">Sort</span>
+          <span className="font-mono text-[10px] text-fg-subtle mr-2 tracking-[0.04em]">Sort</span>
           {SORT_OPTIONS.map(({ key, label }) => (
             <button
               key={key}
               onClick={() => setSort(key)}
               className={cn(
-                'font-mono text-[10px] tracking-[0.08em] uppercase px-2.5 py-1 rounded transition-colors',
+                'font-mono text-[10px] tracking-[0.12em] uppercase px-2.5 py-1 rounded transition-colors border',
                 sort === key
-                  ? 'bg-fg text-bg'
-                  : 'text-fg-muted hover:text-fg hover:bg-muted'
+                  ? 'bg-amber-subtle text-amber border-amber'
+                  : 'text-fg-muted hover:text-fg hover:bg-muted border-transparent'
               )}
             >
               {label}
@@ -84,9 +84,9 @@ export function BrandPerfumeGrid({ perfumes, families }: Props) {
           <button
             onClick={() => setFamily(null)}
             className={cn(
-              'font-mono text-[10px] uppercase tracking-[0.08em] px-3 py-1 rounded-full border transition-colors',
+              'font-mono text-[10px] uppercase tracking-[0.12em] px-3 py-1 rounded-full border transition-colors',
               family === null
-                ? 'border-fg bg-fg text-bg'
+                ? 'border-amber bg-amber-subtle text-amber'
                 : 'border-border text-fg-muted hover:border-fg-subtle hover:text-fg'
             )}
           >
@@ -97,9 +97,9 @@ export function BrandPerfumeGrid({ perfumes, families }: Props) {
               key={f}
               onClick={() => setFamily(f === family ? null : f)}
               className={cn(
-                'font-mono text-[10px] uppercase tracking-[0.08em] px-3 py-1 rounded-full border transition-colors',
+                'font-mono text-[10px] uppercase tracking-[0.12em] px-3 py-1 rounded-full border transition-colors',
                 family === f
-                  ? 'border-fg bg-fg text-bg'
+                  ? 'border-amber bg-amber-subtle text-amber'
                   : 'border-border text-fg-muted hover:border-fg-subtle hover:text-fg'
               )}
             >
