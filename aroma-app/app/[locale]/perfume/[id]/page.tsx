@@ -10,6 +10,7 @@ import { SensoryRadar, type SensoryDataPoint } from '@/components/perfume/sensor
 import { SENSORY_AXES } from '@aroma/shared';
 import { PriceDisplay } from '@/components/perfume/price-display';
 import { FamilyIllustration } from '@/components/ui/family-illustration';
+import { Button } from '@/components/ui/button';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -112,9 +113,9 @@ export default async function PerfumePage({ params }: Props) {
             )}
           </div>
           <div className="flex flex-col gap-2">
-            <button className="w-full py-2.5 text-[13px] font-medium bg-accent text-accent-fg rounded hover:opacity-85 transition-opacity">
+            <Button variant="amber" className="w-full py-2.5 text-[13px]">
               Add to wishlist
-            </button>
+            </Button>
             <button className="w-full py-2.5 text-[13px] font-normal border border-border-strong text-fg-muted rounded hover:border-fg hover:text-fg transition-all">
               I own this
             </button>

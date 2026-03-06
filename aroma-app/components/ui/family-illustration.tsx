@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC, type CSSProperties } from 'react';
 
 interface SvgProps {
   className?: string;
@@ -269,7 +269,7 @@ function DefaultSvg({ name, className, style }: { name: string } & SvgProps) {
   );
 }
 
-export const FAMILY_SVG_MAP: Record<string, React.FC<SvgProps>> = {
+export const FAMILY_SVG_MAP: Record<string, FC<SvgProps>> = {
   citrus:    CitrusSvg,
   floral:    FloralSvg,
   woody:     WoodySvg,
@@ -293,7 +293,7 @@ interface FamilyIllustrationProps {
 
 export function FamilyIllustration({ family, name = '', size, opacity, className }: FamilyIllustrationProps) {
   const FamilySvg = family ? FAMILY_SVG_MAP[family.toLowerCase()] : undefined;
-  const style: React.CSSProperties = {
+  const style: CSSProperties = {
     ...(size ? { width: size, height: size } : {}),
     ...(opacity !== undefined ? { opacity } : {}),
   };
