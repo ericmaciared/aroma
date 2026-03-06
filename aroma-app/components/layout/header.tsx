@@ -14,10 +14,10 @@ export async function Header() {
   const t = await getTranslations('nav');
 
   const navLinks = [
-    { href: '/explore',   label: t('explore')   },
-    { href: '/recommend', label: t('recommend')  },
-    { href: '/brands',    label: t('brands')     },
-    { href: '/notes',     label: t('notes')      },
+    { href: '/explore',   label: t('explore'),   also: ['/perfume']  },
+    { href: '/recommend', label: t('recommend'),  also: []            },
+    { href: '/brands',    label: t('brands'),    also: ['/brand']    },
+    { href: '/notes',     label: t('notes'),     also: ['/note']     },
   ];
 
   return (
@@ -31,8 +31,8 @@ export async function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-7">
-          {navLinks.map(({ href, label }) => (
-            <NavLink key={href} href={href} label={label} />
+          {navLinks.map(({ href, label, also }) => (
+            <NavLink key={href} href={href} label={label} also={also} />
           ))}
         </nav>
 

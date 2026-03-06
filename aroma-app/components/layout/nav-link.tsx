@@ -7,11 +7,15 @@ import { cn } from '@/lib/utils';
 interface Props {
   href: string;
   label: string;
+  also?: string[];
 }
 
-export function NavLink({ href, label }: Props) {
+export function NavLink({ href, label, also = [] }: Props) {
   const pathname = usePathname();
-  const isActive = pathname === href || pathname.startsWith(href + '/');
+  const isActive =
+    pathname === href ||
+    pathname.startsWith(href + '/') ||
+    also.some(p => pathname === p || pathname.startsWith(p + '/'));
 
   return (
     <Link
