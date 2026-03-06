@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { MonoLabel } from '@/components/ui/mono-label';
 import { AccordTag } from '@/components/ui/accord-tag';
@@ -9,6 +9,7 @@ import { NotesPyramid } from '@/components/perfume/notes-pyramid';
 import { SensoryRadar, type SensoryDataPoint } from '@/components/perfume/sensory-radar';
 import { SENSORY_AXES } from '@aroma/shared';
 import { PriceDisplay } from '@/components/perfume/price-display';
+import { FamilyIllustration } from '@/components/ui/family-illustration';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -63,7 +64,7 @@ export default async function PerfumePage({ params }: Props) {
       {/* Reformulation alert */}
       {showReformulationAlert && (
         <div className="border border-border-strong rounded px-4 py-3 flex flex-wrap items-start gap-x-3 gap-y-1.5 bg-muted">
-          <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-fg-subtle">
+          <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-fg-subtle">
             reformulation
           </span>
           <span className="text-[13px] text-fg-muted">
@@ -75,7 +76,22 @@ export default async function PerfumePage({ params }: Props) {
       )}
 
       {/* ── HERO ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10">
+      <div className="relative overflow-hidden">
+        {/* Floating background illustration */}
+        <div
+          className="absolute right-0 top-0 w-[320px] h-[320px] text-fg-subtle pointer-events-none select-none animate-float"
+          aria-hidden="true"
+        >
+          <FamilyIllustration
+            family={(p as any).olfactive_family ?? null}
+            name={p.name}
+            opacity={0.04}
+            className="w-full h-full"
+          />
+        </div>
+
+        {/* existing hero grid — keep all content unchanged */}
+        <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10">
 
         {/* Left: image + actions */}
         <div>
@@ -90,7 +106,7 @@ export default async function PerfumePage({ params }: Props) {
                 priority
               />
             ) : (
-              <span className="font-mono text-[11px] text-fg-subtle tracking-[0.08em]">
+              <span className="font-mono text-[11px] text-fg-subtle tracking-[0.04em]">
                 no image
               </span>
             )}
@@ -151,6 +167,7 @@ export default async function PerfumePage({ params }: Props) {
               </div>
             </>
           )}
+        </div>
         </div>
       </div>
 
