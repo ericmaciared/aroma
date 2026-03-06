@@ -90,6 +90,26 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── How It Works ── */}
+      <section className="py-12 border-b border-border bg-bg-muted -mx-4 sm:-mx-6 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {[
+              { label: t('how.step1Label'), text: t('how.step1Text') },
+              { label: t('how.step2Label'), text: t('how.step2Text') },
+              { label: t('how.step3Label'), text: t('how.step3Text') },
+            ].map(({ label, text }) => (
+              <div key={label} className="pt-4 border-t-2 border-amber">
+                <div className="font-mono text-[10px] tracking-[0.14em] uppercase text-amber mb-2">
+                  {label}
+                </div>
+                <p className="text-[14px] font-light text-fg-muted leading-[1.65]">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Featured ── */}
       {featured.length > 0 && (
         <section className="py-12">

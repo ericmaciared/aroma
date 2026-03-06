@@ -23,7 +23,16 @@
       "embeddingModel": "Modèle d'embedding"
     },
     "featuredTitle": "En vedette",
-    "viewAll": "voir tout →"
+    "viewAll": "voir tout →",
+    "howTitle": "Comment ça marche",
+    "how": {
+      "step1Label": "01 — DÉCRIVEZ",
+      "step1Text": "Parlez-nous de votre humeur, de l'occasion ou d'un parfum que vous aimez déjà.",
+      "step2Label": "02 — CORRESPONDANCE",
+      "step2Text": "Notre IA croise 12 400 fragrances sur 17 axes sensoriels.",
+      "step3Label": "03 — DÉCOUVREZ",
+      "step3Text": "Obtenez des recommandations précises et personnelles avec une transparence totale des ingrédients."
+    }
   },
   "explore": {
     "title": "Explorer",

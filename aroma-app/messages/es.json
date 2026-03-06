@@ -23,7 +23,16 @@
       "embeddingModel": "Modelo de embeddings"
     },
     "featuredTitle": "Destacados",
-    "viewAll": "ver todo →"
+    "viewAll": "ver todo →",
+    "howTitle": "Cómo funciona",
+    "how": {
+      "step1Label": "01 — DESCRIBE",
+      "step1Text": "Cuéntanos tu estado de ánimo, la ocasión o un aroma que ya amas.",
+      "step2Label": "02 — COINCIDE",
+      "step2Text": "Nuestra IA cruza 12.400 fragancias en 17 ejes sensoriales.",
+      "step3Label": "03 — DESCUBRE",
+      "step3Text": "Obtén recomendaciones precisas y personales con total transparencia de ingredientes."
+    }
   },
   "explore": {
     "title": "Explorar",
