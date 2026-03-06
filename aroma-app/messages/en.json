@@ -23,7 +23,16 @@
       "embeddingModel": "Embedding model"
     },
     "featuredTitle": "Featured",
-    "viewAll": "view all →"
+    "viewAll": "view all →",
+    "howTitle": "How it works",
+    "how": {
+      "step1Label": "01 — DESCRIBE",
+      "step1Text": "Tell us your mood, occasion, or a scent you already love.",
+      "step2Label": "02 — MATCH",
+      "step2Text": "Our AI cross-references 12,400 fragrances across 17 sensory axes.",
+      "step3Label": "03 — DISCOVER",
+      "step3Text": "Get precise, personal recommendations with full ingredient transparency."
+    }
   },
   "explore": {
     "title": "Explore",
