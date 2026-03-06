@@ -13,9 +13,9 @@ export function FilterChip({ label, active, onClick }: Props) {
     <button
       onClick={onClick}
       className={cn(
-        'font-mono text-[11px] tracking-[0.02em] px-3 py-1 rounded-full border transition-all',
+        'font-mono text-[11px] tracking-[0.04em] px-3 py-1 rounded-full border transition-all',
         active
-          ? 'bg-accent text-accent-fg border-accent'
+          ? 'bg-amber-subtle text-amber border-amber'
           : 'bg-transparent text-fg-muted border-border hover:border-border-strong hover:text-fg'
       )}
     >
