@@ -31,6 +31,11 @@
   --color-tag-bg:        var(--aroma-tag-bg);
   --color-tag-fg:        var(--aroma-tag-fg);
 
+  /* ── Amber accent ── */
+  --color-amber:        var(--aroma-amber);
+  --color-amber-fg:     var(--aroma-amber-fg);
+  --color-amber-subtle: var(--aroma-amber-subtle);
+
   /* ── shadcn compatibility (maps shadcn utility names to Aroma values) ── */
   --color-background:           var(--aroma-bg);
   --color-foreground:           var(--aroma-fg);
@@ -56,6 +61,7 @@
   /* ── Animations ── */
   --animate-fade-up: fade-up 0.4s ease forwards;
   --animate-fade-in: fade-in 0.3s ease forwards;
+  --animate-float: float 5s ease-in-out infinite;
 }
 
 @keyframes fade-up {
@@ -81,6 +87,9 @@
   --aroma-accent-fg:     #F7F6F3;
   --aroma-tag-bg:        #ECEAE5;
   --aroma-tag-fg:        #4A4845;
+  --aroma-amber:        #A67C3D;
+  --aroma-amber-fg:     #FDFAF5;
+  --aroma-amber-subtle: #F5EDDC;
 
   --radius: 0.375rem; /* 6px — for shadcn internal usage */
 }
@@ -99,6 +108,9 @@
   --aroma-accent-fg:     #0C0B09;
   --aroma-tag-bg:        #1F1E1B;
   --aroma-tag-fg:        #9A9790;
+  --aroma-amber:        #C9973C;
+  --aroma-amber-fg:     #0C0B09;
+  --aroma-amber-subtle: #1A160E;
 }
 
 @layer base {
@@ -143,4 +155,17 @@
   font-family: var(--font-mono);
   font-size: 20px;
   letter-spacing: -0.02em;
+}
+
+@utility overlay-dark {
+  background: rgba(12, 11, 9, 0.45);
+}
+
+@utility overlay-warm {
+  background: rgba(30, 20, 8, 0.35);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
 }
