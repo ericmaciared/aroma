@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { AccordTag } from '@/components/ui/accord-tag';
 import { MonoLabel } from '@/components/ui/mono-label';
 import { PriceDisplay } from '@/components/perfume/price-display';
+import { FamilyIllustration } from '@/components/ui/family-illustration';
 
 interface PerfumeCardProps {
   id: string;
@@ -45,7 +46,14 @@ export function PerfumeCard({
             sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 200px"
           />
         ) : (
-          <BottlePlaceholder />
+          <div className="w-full h-full flex items-center justify-center p-6 text-fg-subtle">
+            <FamilyIllustration
+              family={olfactiveFamily ?? null}
+              name={name}
+              opacity={0.12}
+              className="w-full h-full"
+            />
+          </div>
         )}
       </div>
 
@@ -87,17 +95,5 @@ export function PerfumeCard({
         <PriceDisplay priceUsd={priceUsd} className="font-mono text-[11px] text-fg-muted" />
       </div>
     </div>
-  );
-}
-
-function BottlePlaceholder() {
-  return (
-    <svg width="48" height="80" viewBox="0 0 48 80" fill="none" className="opacity-[0.08]">
-      <rect x="17" y="0" width="14" height="10" rx="2" fill="currentColor" />
-      <path
-        d="M11 18 Q9 28 9 46 L9 66 Q9 72 14 72 L34 72 Q39 72 39 66 L39 46 Q39 28 37 18 Z"
-        fill="currentColor"
-      />
-    </svg>
   );
 }
