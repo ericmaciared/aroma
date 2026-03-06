@@ -17,6 +17,7 @@ interface PerfumeCardProps {
   communityRating?: number | null;
   priceUsd?: number | null;
   imageUrl?: string | null;
+  style?: React.CSSProperties;
 }
 
 export function PerfumeCard({
@@ -29,9 +30,10 @@ export function PerfumeCard({
   communityRating,
   priceUsd,
   imageUrl,
+  style,
 }: PerfumeCardProps) {
   return (
-    <div className="relative group bg-card hover:bg-muted transition-colors duration-150 p-5 flex flex-col">
+    <div className="relative group bg-card hover:bg-muted transition-colors duration-150 p-5 flex flex-col animate-fade-up" style={style}>
       {/* Stretch link — makes the whole card navigate to the perfume page */}
       <Link href={`/perfume/${id}`} aria-label={name} className="absolute inset-0 z-0" />
 

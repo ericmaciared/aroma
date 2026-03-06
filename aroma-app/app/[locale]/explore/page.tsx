@@ -63,7 +63,7 @@ export default async function ExplorePage({ searchParams }: Props) {
           className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
           style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}
         >
-          {perfumes.map(p => (
+          {perfumes.map((p, index) => (
             <PerfumeCard
               key={p.id}
               id={p.id}
@@ -75,6 +75,7 @@ export default async function ExplorePage({ searchParams }: Props) {
               communityRating={p.community_rating}
               priceUsd={p.price_usd}
               imageUrl={(p as any).images?.[0]?.url ?? null}
+              style={{ animationDelay: `${Math.min(index, 7) * 30}ms` }}
             />
           ))}
         </div>

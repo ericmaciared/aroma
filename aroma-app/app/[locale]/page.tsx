@@ -23,7 +23,7 @@ export default async function HomePage() {
 
       {/* ── Hero ── */}
       <section className="pt-20 pb-16 border-b border-border">
-        <div className="font-mono text-[11px] tracking-[0.14em] uppercase text-fg-subtle mb-5 flex items-center gap-2">
+        <div className="font-mono text-[11px] tracking-[0.12em] uppercase text-fg-subtle mb-5 flex items-center gap-2">
           <span className="inline-block w-5 h-px bg-fg-subtle" />
           {t('eyebrow')}
         </div>
@@ -77,13 +77,13 @@ export default async function HomePage() {
           <div className="flex items-baseline justify-between mb-6">
             <h2 className="text-[18px] font-normal tracking-[-0.02em]">{t('featuredTitle')}</h2>
             <Link href="/explore"
-              className="font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.06em]">
+              className="font-mono text-[11px] text-fg-subtle hover:text-fg transition-colors tracking-[0.04em]">
               {t('viewAll')}
             </Link>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border rounded-lg overflow-hidden">
-            {featured.map(p => (
+            {featured.map((p, index) => (
               <PerfumeCard
                 key={p.id}
                 id={p.id}
@@ -95,6 +95,7 @@ export default async function HomePage() {
                 communityRating={p.community_rating}
                 priceUsd={p.price_usd}
                 imageUrl={(p as any).images?.[0]?.url ?? null}
+                style={{ animationDelay: `${Math.min(index, 7) * 30}ms` }}
               />
             ))}
           </div>

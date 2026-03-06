@@ -86,7 +86,7 @@ export default async function BrandPage({ params }: Props) {
             href={brand.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.1em] text-fg-muted border border-border px-3 py-1.5 rounded hover:border-fg-subtle hover:text-fg transition-colors"
+            className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.12em] text-fg-muted border border-border px-3 py-1.5 rounded hover:border-fg-subtle hover:text-fg transition-colors"
           >
             Visit website
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="opacity-60">
@@ -104,7 +104,7 @@ export default async function BrandPage({ params }: Props) {
             className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
             style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}
           >
-            {topRated.map(p => (
+            {topRated.map((p, index) => (
               <PerfumeCard
                 key={p.id}
                 id={p.id}
@@ -114,6 +114,7 @@ export default async function BrandPage({ params }: Props) {
                 communityRating={p.community_rating}
                 priceUsd={p.price_usd}
                 imageUrl={(p as any).images?.[0]?.url ?? null}
+                style={{ animationDelay: `${Math.min(index, 7) * 30}ms` }}
               />
             ))}
           </div>

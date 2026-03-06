@@ -106,22 +106,22 @@ export default async function NotePage({ params }: Props) {
           {/* Tags: natural / allergen */}
           <div className="flex flex-wrap gap-1.5 mb-5">
             {note?.is_natural === true && (
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-muted tracking-[0.06em]">
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-muted tracking-[0.04em]">
                 natural
               </span>
             )}
             {note?.is_natural === false && (
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-subtle tracking-[0.06em]">
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-subtle tracking-[0.04em]">
                 synthetic
               </span>
             )}
             {note?.eu_declared_allergen && (
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-subtle tracking-[0.06em]">
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-subtle tracking-[0.04em]">
                 EU allergen
               </span>
             )}
             {note?.is_common_allergen && !note?.eu_declared_allergen && (
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-subtle tracking-[0.06em]">
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm border border-border text-fg-subtle tracking-[0.04em]">
                 common allergen
               </span>
             )}
@@ -144,7 +144,7 @@ export default async function NotePage({ params }: Props) {
             className="grid gap-px bg-border border border-border rounded-lg overflow-hidden"
             style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}
           >
-            {perfumes.map(p => {
+            {perfumes.map((p, index) => {
               const brand = (p as any).brands as { id?: string; name?: string } | null;
               return (
                 <PerfumeCard
@@ -158,6 +158,7 @@ export default async function NotePage({ params }: Props) {
                   communityRating={p.community_rating}
                   priceUsd={p.price_usd}
                   imageUrl={(p as any).images?.[0]?.url ?? null}
+                  style={{ animationDelay: `${Math.min(index, 7) * 30}ms` }}
                 />
               );
             })}
