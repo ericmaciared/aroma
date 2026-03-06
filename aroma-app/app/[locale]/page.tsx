@@ -22,9 +22,28 @@ export default async function HomePage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
       {/* ── Hero ── */}
-      <section className="pt-20 pb-16 border-b border-border">
-        <div className="font-mono text-[11px] tracking-[0.12em] uppercase text-fg-subtle mb-5 flex items-center gap-2">
-          <span className="inline-block w-5 h-px bg-fg-subtle" />
+      <section className="relative pt-20 pb-16 border-b border-border overflow-hidden">
+
+        {/* Amber glow — self-contained div, swap-friendly for future video/canvas bg */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10"
+          style={{
+            background: 'radial-gradient(ellipse 70% 60% at 30% 40%, color-mix(in srgb, var(--aroma-amber) 10%, transparent), transparent 70%)',
+          }}
+        />
+
+        {/* Ghost stat number */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 font-mono text-[180px] font-medium leading-none text-fg select-none opacity-[0.04] tracking-tight pr-4 hidden lg:block"
+        >
+          12,400
+        </div>
+
+        {/* Eyebrow */}
+        <div className="font-mono text-[11px] tracking-[0.12em] uppercase text-amber mb-5 flex items-center gap-2">
+          <span className="inline-block w-5 h-px bg-amber" />
           {t('eyebrow')}
         </div>
 
@@ -41,13 +60,13 @@ export default async function HomePage() {
         <div className="flex gap-2.5 items-center">
           <Link
             href="/explore"
-            className="inline-flex items-center justify-center px-5 py-2.5 text-[13px] font-medium bg-accent text-accent-fg rounded hover:opacity-85 transition-opacity"
+            className="inline-flex items-center justify-center px-5 py-2.5 text-[13px] font-medium bg-amber text-amber-fg rounded-sm hover:opacity-90 transition-opacity"
           >
             {t('ctaExplore')}
           </Link>
           <Link
             href="/recommend"
-            className="inline-flex items-center justify-center px-5 py-2.5 text-[13px] font-normal border border-border-strong text-fg-muted rounded hover:border-fg hover:text-fg transition-all"
+            className="inline-flex items-center justify-center px-5 py-2.5 text-[13px] font-normal border border-border-strong text-fg-muted rounded-sm hover:border-fg hover:text-fg transition-all"
           >
             {t('ctaRecommend')}
           </Link>
@@ -62,7 +81,7 @@ export default async function HomePage() {
             { num: '1536d',  label: t('stats.embeddingModel') },
           ].map(({ num, label }) => (
             <div key={label}>
-              <div className="font-mono text-[22px] tracking-tight text-fg leading-none mb-1">
+              <div className="font-mono text-[22px] tracking-tight text-amber leading-none mb-1">
                 {num}
               </div>
               <MonoLabel>{label}</MonoLabel>
